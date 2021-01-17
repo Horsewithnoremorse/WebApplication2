@@ -1,0 +1,49 @@
+﻿@page "{id:int}"
+@model WebApplication2.Pages.Contacts.EditModel
+@{
+    ViewData["Title"] = "Edit contact";
+}
+<h2>@ViewData["Title"]</h2>
+<p><a asp-page="Index">Back</a></p>
+<form method="post">
+    <div asp-validation-summary="All"></div>
+    <input asp-for="Contact.Id" type="hidden" />
+    <div>
+        <label>Name</label>
+        <div>
+            <input asp-for="Contact.Name" />
+            <span asp-validation-for="Contact.Name"></span>
+        </div>
+    </div>
+    <div>
+        <label>Mobile Phone</label>
+        <div>
+            <input asp-for="Contact.MobilePhone" />
+            <span asp-validation-for="Contact.MobilePhone"></span>
+        </div>
+    </div>
+    <div>
+        <label>Dear</label>
+        <div>
+            <input asp-for="Contact.Dear" />
+            <span asp-validation-for="Contact.Dear"></span>
+        </div>
+    </div>
+    <div>
+        <label>JobTitle</label>
+        <div>
+            <input asp-for="Contact.JobTitle" />
+            <span asp-validation-for="Contact.JobTitle"></span>
+        </div>
+    </div>
+    <div>
+        <label>BirthDate</label>
+        <div>
+            <input asp-for="Contact.BirthDate" />
+            <span asp-validation-for="Contact.BirthDate"></span>
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</form>

@@ -1,0 +1,15 @@
+﻿@page
+@model WebApplication2.Pages.Contacts.CreateModel
+@{ViewData["Title"] = "Add new contact";
+}
+<h2>@ViewData["Title"]</h2>
+<p><a asp-page="Index">Back</a></p>
+<div asp-validation-summary="All"></div>
+<form method="POST">
+    <div><label>Name</label><br /><input asp-for="Contact.Name" /></div>
+    <div><label>Mobile phone:</label><br /><input asp-for="Contact.MobilePhone" /></div>
+    <div><label>Dear:</label><br /><input asp-for="Contact.Dear" /></div>
+    <div><label>Job title:</label><br /><input asp-for="Contact.JobTitle" /></div>
+    <div><label>Birth Date:</label><br /><input asp-for="Contact.BirthDate" /></div>
+    <input type="submit" value="Add" />
+</form>
